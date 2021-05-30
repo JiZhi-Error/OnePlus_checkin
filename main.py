@@ -119,3 +119,4 @@ if __name__ == "__main__":
     massage = OnePlusBBSCheckIn(check_item=_check_item).main()
     if('失败' in massage):
         push(key,'一加社区签到失败',massage)
+    print(massage)
