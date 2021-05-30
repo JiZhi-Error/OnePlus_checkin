@@ -89,8 +89,6 @@ class OnePlusBBSCheckIn:
 
     def main(self):
         oneplusbbs_cookie = self.check_item.get("oneplusbbs_cookie")
-        print(type(oneplusbbs_cookie))
-        print(oneplusbbs_cookie)
         bbs_uname = re.findall('''bbs_uname=(.*?);''', oneplusbbs_cookie)
         bbs_uname = bbs_uname[0].split("%7C")[0] if bbs_uname else "未获取到用户信息"
         try:
@@ -106,5 +104,4 @@ class OnePlusBBSCheckIn:
 
 if __name__ == "__main__":
     _check_item = json.loads(os.getenv('DATA'))
-    print(_check_item)
     print(OnePlusBBSCheckIn(check_item=_check_item).main())
