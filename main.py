@@ -95,7 +95,6 @@ class OnePlusBBSCheckIn:
         msg = f"成功抽奖 {success_count} 次"
         draw_msg = "抽奖状态: " + str(msg)
         draw_msg += f"\n抽奖结果: 获得 {sum(sum_list) - success_count * 10} 加油"
-        print(draw_msg)
         return draw_msg
 
     def main(self):
